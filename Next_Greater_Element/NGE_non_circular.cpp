@@ -1,4 +1,4 @@
-vector<int> nextGreaterElements(vector<int>& nums) {
+vector<int> NGE(vector<int>& nums) {
         int n=nums.size();
         vector<int>nge(n,-1);
         stack<int>st;
