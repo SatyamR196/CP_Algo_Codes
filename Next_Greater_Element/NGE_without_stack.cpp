@@ -1,4 +1,4 @@
-vector<int> nextLargerElement(vector<int> arr, int n){
+vector<int> NGE(vector<int> arr, int n){
         vector<int>nge(n,-1);
         for(int i=n-1;i>=0;i--){
             nge[i]=i+1;//doing this we assume that next element is our NGE
