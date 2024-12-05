@@ -1,4 +1,4 @@
-# Fixed sliding window using 2 Pointers
+// Fixed sliding window using 2 Pointers
     int first=0,last=0;
     int wSize;
     while(last<n){
