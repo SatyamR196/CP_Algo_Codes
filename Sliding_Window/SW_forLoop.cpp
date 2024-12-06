@@ -1,3 +1,5 @@
+// i = index of last window element , (i-wSize+1) = index of first window element ; 
+
 for(int i=0;i<n;i++){
       
 //Action to be performed always like insertion in window. 
