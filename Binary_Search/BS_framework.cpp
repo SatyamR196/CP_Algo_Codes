@@ -11,6 +11,7 @@ int main()
       int mid=low+(high-low)/2;
       
       if(check(arr,mid,key)){
+        // if(arr[mid] == key) ans=mid; For actual searching of elements
         ans=mid;
         high=mid-1;
       }else{
