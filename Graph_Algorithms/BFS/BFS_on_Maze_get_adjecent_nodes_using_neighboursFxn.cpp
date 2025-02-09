@@ -1,4 +1,5 @@
 // '#' --> Wall, '.' --> open space , 'S' --> staring point , 'F' --> final point
+// Note using neighbours fxn is not good for speed, generate neighbours inside bfs only.
 #include <bits/stdc++.h>
 using namespace std;
 using vvi = vector<vector<int>>;
