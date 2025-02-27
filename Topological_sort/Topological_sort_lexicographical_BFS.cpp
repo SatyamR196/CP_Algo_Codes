@@ -1,3 +1,4 @@
+// This can also be used to dectect cycle in DAG, if(num of ele in topo != n ) isCycle == true ;
 #include <bits/stdc++.h>
 using namespace std;
 int n,m;
