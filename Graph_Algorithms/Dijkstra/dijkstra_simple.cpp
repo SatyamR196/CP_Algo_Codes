@@ -10,6 +10,13 @@
 5 3 6
 2 3 2
 */
+/* Sample test case:
+3 3
+0 1 2
+1 2 -7
+2 0 3
+if visited check is not there in some cases it may give TLE, and in case of -ve cycle it will give TLE for sure in absence of this.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 using lli = long long;
@@ -61,7 +68,7 @@ int main()
     int a,b,c;
     cin>>a>>b>>c;
     graph[a].push_back({b,c});
-    graph[b].push_back({a,c});
+    // graph[b].push_back({a,c});
   }
   
   dijkstra(1);
@@ -73,4 +80,3 @@ int main()
     cout<<ele<<" ";
   }
 }
-
