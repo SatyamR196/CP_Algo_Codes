@@ -11,6 +11,8 @@ ll INF=1e18 ;
 
 vector<vector<int>>graph;// in matrix form
 vector<vector<int>>parent;
+// What this parent will store
+// parent[i][j] represents, i --> a --> b --> ... --> c --> parent[i][j] or k --> j
 
 void printPath(int i,int j){
   if(i!=j) printPath(i,parent[i][j]) ;
@@ -20,7 +22,7 @@ void printPath(int i,int j){
 void solve(){
     cin>>n>>m;
     graph.resize(n+1,vector<int>(n+1,INF)) ;
-    parent.resize(n+1,vector<int>(n+1,-1)) ;
+    parent.resize(n+1,vector<int>(n+1)) ;
 
     for(int i=0;i<m;i++){
         int u,v,w;
@@ -35,13 +37,13 @@ void solve(){
             if(i==j) graph[i][j]=0 ;
         }
     }
-    
+    // Initializing parent:
     for(int i=0;i<=n;i++){
       for(int j=0;j<=n;j++){
         parent[i][j] = i ;
       }
     }
-
+    debug(parent) ;
     //Floyed-Warshall 
     for(int k=1;k<=n;k++){
        for(int i=1;i<=n;i++){
@@ -49,7 +51,9 @@ void solve(){
                 if(graph[i][k]== INF || graph[k][j]== INF) continue;
                 if(graph[i][k]+graph[k][j] < graph[i][j] ){
                   graph[i][j] = graph[i][k]+graph[k][j];
-                  parent[i][j] = parent[k][j] ;
+                  // parent[i][j] = parent[k][j] ; // original one below is my modification
+                  parent[i][j] = k ;  
+                  // since we came to j via node k, hence parent of j is node k. 
                 }
             }
         } 
@@ -57,7 +61,7 @@ void solve(){
     
     printPath(1,3);
     cout<<endl;
-
+    debug(graph,parent) ;
 }
 
 signed main(){
