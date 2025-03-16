@@ -12,7 +12,7 @@ ll INF=1e18 ;
 vector<vector<int>>graph;// in matrix form
 
 void solve(){
-    cin>>n>>m>>q;
+    cin>>n>>m;
     graph.resize(n+1,vector<int>(n+1,INF)) ;
 
     for(int i=0;i<m;i++){
