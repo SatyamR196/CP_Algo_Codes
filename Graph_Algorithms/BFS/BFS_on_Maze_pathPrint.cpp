@@ -20,18 +20,6 @@ bool check(int i,int j){
     else return false;
 }
 
-vector<state> neighbours(state node){
-  vector<state> v;
-  for(int k=0;k<4;k++){
-    int x = node.F+dx[k];
-    int y = node.S+dy[k];
-    if(check(x,y)){
-      v.push_back({x,y});
-    }
-  }
-  return v;
-}
-
 void bfs(state sNode){
   queue<state>q;
   q.push(sNode) ;
@@ -49,7 +37,7 @@ void bfs(state sNode){
         if(check(x,y) && !visited[x][y]){
             q.push({x,y}) ;
             visited[x][y] = 1 ;
-            dist[x][y] = dist[x][y]+1 ;
+            dist[x][y] = dist[node.F][node.S]+1 ;
             par[x][y] = node ;
         }
       }
@@ -109,6 +97,12 @@ int main()
   }
 
   bfs(st);
+  for(int i=0; i<n;i++){
+    for(int j=0; j<m; j++){
+      cout<<dist[i][j]<<" ";
+    }
+    cout<<endl;
+  }
   if(dist[end.F][end.S]==-1){
     cout<<"No valid path exists to reach Final Point";
   }else{
