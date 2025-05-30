@@ -1,4 +1,5 @@
-//#
+//# 
+// Example Link : https://onecompiler.com/cpp/43k93sxkg
 //! MINIMUM SPANNING TREE(MST) CODE : USING KRUSHKAL'S ALGO ( Sort EdgesList in ascending order(minHeap) --> using unionFind, merge edges )
 //~ For getting maximum spanning Tree : sort edges in descending order of weight(maxHeap) then merge edges
 //#
