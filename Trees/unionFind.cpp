@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// LINK : https://onecompiler.com/cpp/43k62382t
+
 //* Rank : It can be height or size of the tree, Rank[x] = Rank[representative(x)] 
 //* i.e size of tree where node x is present. We use size of tree as rank.
 
