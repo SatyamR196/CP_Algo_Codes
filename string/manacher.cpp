@@ -1,3 +1,5 @@
+// LINK : https://onecompiler.com/cpp/43kxdgu2d
+
 vector<vector<int>> manacher(string s){
   int n = s.length() ;
   vector<vector<int>> p(2,vector<int>(n,0));
