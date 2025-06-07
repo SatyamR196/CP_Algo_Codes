@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// TC = O(n*log(log(n)) ;
 vector<int>seive(int n){
   vector<int>num(n+1,1) ;
   num[0] = 0 ;
