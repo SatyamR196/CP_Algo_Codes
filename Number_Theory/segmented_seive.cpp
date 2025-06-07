@@ -4,6 +4,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long 
+#define int long long
 
 // Using seive of eratosthenes to check primes till Sqrt(b) ;
 vector<int>seive_opt(int n){
