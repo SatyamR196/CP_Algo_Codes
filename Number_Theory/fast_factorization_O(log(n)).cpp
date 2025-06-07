@@ -1,7 +1,16 @@
+//! Find the PF of given number x, answer each query in O(log(x)) ;
+//~ Link : https://onecompiler.com/cpp/43m356hn4
+//? Algo :
+//~ Create a smallest prime array, sp[i] : smallest primeFactor of i ;
+//~ Using similar techinque as seive of eratosthenes, loop from 2 to n,
+//~ set for all multiples of prime 2, sp[] = 2, repeat this for 3,4...n
+//~ Once this sp array is ready, Make primeFactor() fxn using PF(x) = sp[x] * PF(x/sp[x]) ;
+//~ Either recusively or in loop, and we will get all PFs in TC=O{log(x)} 
 #include <bits/stdc++.h>
-using namespace std;
+using namespace std ;
 
 vector<int> get_sp_arr(int n){
+  
   vector<int>sp(n+1) ;
   for (int i = 2; i <= n; i++) {
     sp[i] = i; // Initially assume each number is prime
@@ -15,7 +24,7 @@ vector<int> get_sp_arr(int n){
       }
     }
   }
-
+  
   return sp ;
 }
 
