@@ -1,6 +1,11 @@
+// LCCM : Level-Choice-Check-Move(i.e. call fxn)
+// Level = A pointer which will help us in exploring all the solution space, for arr,vector,string --> level = index i, for set,map --> level = iterator *it
+// Choice = For each level what choices you can make e.g. move 1/2/3 steps in n-steps problem, use '(' or ')' in parenthesis generation problem.
+// Check = For each of your choice, check if it's valid as per the constraint, e.g. in n-steps problem, you can't choose 3 step-jump if curr_step+3 > n
+// Move = If check is true, then insert choice into container and call fxn itself to move to next level, don't forget to remove choice once you come out.
+
 #include <bits/stdc++.h>
 using namespace std;
-// LCCM : Level-Choice-Check-Move(i.e. call fxn)
 int n,k;
 // Global variable to store all possible answer;
 vector<string> ans;
