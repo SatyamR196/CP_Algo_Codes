@@ -1,3 +1,4 @@
+#define ll long long
 vector<int> sieve(ll n) {
     // Return a vector of prime numbers up to n, not a boolean array
     vector<bool> isPrime(n+1, true);
