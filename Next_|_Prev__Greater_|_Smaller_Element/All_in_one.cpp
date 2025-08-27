@@ -1,4 +1,5 @@
 // This code can be used to find NGE,PGE,NSE and PSE, just choose appropriate pair of for_loop and while_loop and uncomment them.
+// Note : This will store value of NGE,PGE,NSE & PSE not their indices, if you want indices then use : v[st.top()]= i ; in line 10
   stack<int>st;
   vector<int>v(n,-1);
 
