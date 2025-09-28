@@ -20,7 +20,7 @@
     //Updating ans variable
     ans= ;
     
-    if(last<=first){//Empty window condition
+    if(last<first){//Empty window condition
       last=first ;
       first++ ;
     }
