@@ -20,9 +20,9 @@
     //Updating ans variable
     ans= ;
     
-    if(last<first){//Empty window condition
-      first++;
-      last=first-1;
+    if(last<=first){//Empty window condition
+      last=first ;
+      first++ ;
     }
     else{
       // Removal from data-structure
